@@ -187,28 +187,28 @@
 
 ## Phase 6: Haunted Overview (Dashboard & Summaries)
 
-- [ ] 19. Implement summary backend
-  - [ ] 19.1 Create summary service
+- [x] 19. Implement summary backend
+  - [x] 19.1 Create summary service
     - Implement `src/services/summary.ts` with getDailySummary, getWeeklySummary, getMonthlySummary, getDateRangeSummary
     - Aggregate liters, amount, entry_count from milk_entries
     - _Requirements: 5.1, 5.2, 5.3, 5.4_
 
-- [ ] 20. Implement dashboard UI
-  - [ ] 20.1 Create dashboard layout
+- [x] 20. Implement dashboard UI
+  - [x] 20.1 Create dashboard layout
     - Implement `src/app/dashboard/layout.tsx` with sidebar navigation
     - Add links to Customers, Entries, Rates, Reports
     - _Requirements: 5.1_
-  - [ ] 20.2 Create dashboard overview page
+  - [x] 20.2 Create dashboard overview page
     - Implement `src/app/dashboard/page.tsx`
     - Display today's total liters, total amount, entry count
     - _Requirements: 5.1_
-  - [ ] 20.3 Create weekly summary view
+  - [x] 20.3 Create weekly summary view
     - Display day-by-day breakdown for current week
     - _Requirements: 5.3_
-  - [ ] 20.4 Create monthly summary view
+  - [x] 20.4 Create monthly summary view
     - Display week-by-week breakdown and monthly totals
     - _Requirements: 5.4_
-  - [ ] 20.5 Create date range selector
+  - [x] 20.5 Create date range selector
     - Add date picker for custom range
     - Display aggregated totals for selected period
     - _Requirements: 5.2_
@@ -218,7 +218,7 @@
     - **Property 11: Summary Aggregation Correctness**
     - **Validates: Requirements 5.1, 5.2, 5.3, 5.4**
 
-- [ ] 22. Haunted Overview Checkpoint
+- [x] 22. Haunted Overview Checkpoint
   - Ensure all summary tests pass, ask the user if questions arise.
 
 ---
