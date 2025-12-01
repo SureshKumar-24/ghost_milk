@@ -138,30 +138,30 @@
 
 ## Phase 5: Ghostly Measurements (Milk Entry Recording)
 
-- [ ] 15. Implement milk entry backend
-  - [ ] 15.1 Create validation utilities
+- [x] 15. Implement milk entry backend
+  - [x] 15.1 Create validation utilities
     - Implement `src/lib/validation.ts` with validateMilkEntry function
     - Validate FAT (0-15), SNF (0-15), liters (>0)
     - Return structured validation errors
     - _Requirements: 3.2, 3.3, 3.4_
-  - [ ] 15.2 Create milk entry service
+  - [x] 15.2 Create milk entry service
     - Implement `src/services/milk-entry.ts` with create, getById, listByDate, listByCustomer, update, delete
     - Integrate validation before save
     - Calculate amount using rate service
     - _Requirements: 3.1, 3.6_
 
-- [ ] 16. Implement milk entry UI
-  - [ ] 16.1 Create milk entry form
+- [x] 16. Implement milk entry UI
+  - [x] 16.1 Create milk entry form
     - Implement `src/app/dashboard/entries/page.tsx`
     - Add customer selector, date picker, FAT, SNF, liters inputs
     - Show real-time validation errors
     - Display calculated amount preview
     - _Requirements: 3.1, 3.2, 3.3, 3.4_
-  - [ ] 16.2 Implement success animation
+  - [x] 16.2 Implement success animation
     - Create ghost pop-up animation component
     - Display on successful entry save
     - _Requirements: 3.5_
-  - [ ] 16.3 Create entries list by date
+  - [x] 16.3 Create entries list by date
     - Display entries table filtered by selected date
     - Show customer name, FAT, SNF, liters, amount
     - _Requirements: 3.6_
@@ -180,7 +180,7 @@
     - **Property 10: Rate Update Non-Retroactivity**
     - **Validates: Requirements 4.2**
 
-- [ ] 18. Ghostly Measurements Checkpoint
+- [x] 18. Ghostly Measurements Checkpoint
   - Ensure all milk entry tests pass, ask the user if questions arise.
 
 ---
