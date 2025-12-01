@@ -1,0 +1,86 @@
+/* Clean Theme - Professional Blue */
+
+.theme-clean {
+  --color-background: #FFFFFF;
+  --color-primary: #3B82F6;
+  --color-accent: #10B981;
+  --color-text: #1F2937;
+  --color-error: #EF4444;
+  --color-surface: #F9FAFB;
+  --color-border: #E5E7EB;
+}
+
+/* Override dark backgrounds for clean theme */
+.theme-clean .bg-gray-900 {
+  background-color: var(--color-background) !important;
+}
+
+.theme-clean .bg-gray-800 {
+  background-color: var(--color-surface) !important;
+}
+
+.theme-clean .bg-gray-800\/50 {
+  background-color: rgba(249, 250, 251, 0.5) !important;
+}
+
+.theme-clean .border-gray-700 {
+  border-color: var(--color-border) !important;
+}
+
+.theme-clean .border-gray-800 {
+  border-color: var(--color-border) !important;
+}
+
+.theme-clean .text-white {
+  color: var(--color-text) !important;
+}
+
+.theme-clean .text-gray-300 {
+  color: #4B5563 !important;
+}
+
+.theme-clean .text-gray-400 {
+  color: #6B7280 !important;
+}
+
+.theme-clean .text-purple-400 {
+  color: var(--color-primary) !important;
+}
+
+.theme-clean .bg-purple-600 {
+  background-color: var(--color-primary) !important;
+}
+
+.theme-clean .hover\:bg-purple-700:hover {
+  background-color: #2563EB !important;
+}
+
+.theme-clean .text-green-400 {
+  color: var(--color-accent) !important;
+}
+
+/* Disable spooky animations in clean mode */
+.theme-clean .ghost-float,
+.theme-clean .flicker-text,
+.theme-clean .fog-overlay {
+  animation: none !important;
+  display: none !important;
+}
+
+.theme-clean .neon-text,
+.theme-clean .neon-border {
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* Clean skeleton loader */
+.theme-clean .skeleton {
+  background: linear-gradient(
+    90deg,
+    #F3F4F6 25%,
+    #E5E7EB 50%,
+    #F3F4F6 75%
+  );
+  background-size: 200% 100%;
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+}

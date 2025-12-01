@@ -1,0 +1,112 @@
+/* Spooky Theme - Halloween/Neon Purple */
+
+.theme-spooky {
+  --color-background: #0A0A0F;
+  --color-primary: #8A2BE2;
+  --color-accent: #4BE1C3;
+  --color-text: #F8F8FF;
+  --color-error: #FF3B3B;
+  --color-surface: #1a1a2e;
+  --color-border: #2d2d44;
+}
+
+/* Neon glow effects */
+.theme-spooky .neon-text {
+  text-shadow: 
+    0 0 5px var(--color-primary),
+    0 0 10px var(--color-primary),
+    0 0 20px var(--color-primary),
+    0 0 40px var(--color-primary);
+}
+
+.theme-spooky .neon-border {
+  box-shadow: 
+    0 0 5px var(--color-primary),
+    0 0 10px var(--color-primary),
+    inset 0 0 5px rgba(138, 43, 226, 0.1);
+}
+
+/* Ghost floating animation */
+@keyframes ghostFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+.theme-spooky .ghost-float {
+  animation: ghostFloat 3s ease-in-out infinite;
+}
+
+/* Flickering neon text */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow: 
+      0 0 5px var(--color-primary),
+      0 0 10px var(--color-primary),
+      0 0 20px var(--color-primary);
+  }
+  20%, 24%, 55% {
+    opacity: 0.8;
+    text-shadow: none;
+  }
+}
+
+.theme-spooky .flicker-text {
+  animation: flicker 2s infinite;
+}
+
+/* Fog overlay */
+@keyframes fogMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.theme-spooky .fog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(138, 43, 226, 0.03) 25%,
+    transparent 50%,
+    rgba(75, 225, 195, 0.02) 75%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: fogMove 20s linear infinite;
+  z-index: 1;
+}
+
+/* Skeleton loader */
+@keyframes skeletonPulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.theme-spooky .skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface) 25%,
+    var(--color-border) 50%,
+    var(--color-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+  border-radius: 4px;
+}
