@@ -225,25 +225,25 @@
 
 ## Phase 7: Customer Portal (Customer View)
 
-- [ ] 23. Implement customer portal backend
-  - [ ] 23.1 Create customer-specific entry queries
+- [-] 23. Implement customer portal backend
+  - [x] 23.1 Create customer-specific entry queries
     - Add listByCustomer method filtering by authenticated customer_id
     - Create customer summary aggregation functions
     - _Requirements: 6.1, 6.2, 6.3, 6.4_
 
-- [ ] 24. Implement customer portal UI
-  - [ ] 24.1 Create portal layout
+- [x] 24. Implement customer portal UI
+  - [x] 24.1 Create portal layout
     - Implement `src/app/portal/layout.tsx` for customer view
     - Simpler navigation than owner dashboard
     - _Requirements: 6.1_
-  - [ ] 24.2 Create customer entries view
+  - [x] 24.2 Create customer entries view
     - Implement `src/app/portal/page.tsx`
     - Display customer's own entries with FAT, SNF, liters, amount
     - _Requirements: 6.1, 6.2_
-  - [ ] 24.3 Create customer monthly summary
+  - [x] 24.3 Create customer monthly summary
     - Display total liters and amount for current month
     - _Requirements: 6.3_
-  - [ ] 24.4 Create customer historical view
+  - [x] 24.4 Create customer historical view
     - Display entries grouped by month with totals
     - _Requirements: 6.4_
 
@@ -258,7 +258,7 @@
     - **Property 14: Customer Summary Aggregation**
     - **Validates: Requirements 6.3, 6.4**
 
-- [ ] 26. Customer Portal Checkpoint
+- [x] 26. Customer Portal Checkpoint
   - Ensure all portal tests pass, ask the user if questions arise.
 
 ---
