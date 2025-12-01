@@ -25,27 +25,27 @@
 
 ## Phase 2: Auth Spirit (Authentication)
 
-- [ ] 3. Implement authentication backend
-  - [ ] 3.1 Create auth service
+- [x] 3. Implement authentication backend
+  - [x] 3.1 Create auth service
     - Implement `src/services/auth.ts` with signIn, signUp, signOut, getSession, getUser
     - Handle dairy owner registration with automatic tenant (dairy) creation
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5_
-  - [ ] 3.2 Create auth middleware
+  - [x] 3.2 Create auth middleware
     - Implement `src/middleware.ts` for protected route handling
     - Handle session validation and expiry redirect
     - _Requirements: 1.4_
 
-- [ ] 4. Implement authentication UI
-  - [ ] 4.1 Create login page
+- [x] 4. Implement authentication UI
+  - [x] 4.1 Create login page
     - Implement `src/app/login/page.tsx` with email/password form
     - Display error messages for invalid credentials
     - Redirect to dashboard on success
     - _Requirements: 1.1, 1.2_
-  - [ ] 4.2 Create registration page
+  - [x] 4.2 Create registration page
     - Implement `src/app/register/page.tsx` for dairy owner signup
     - Include dairy name field for tenant creation
     - _Requirements: 1.5_
-  - [ ] 4.3 Implement logout functionality
+  - [x] 4.3 Implement logout functionality
     - Add logout action to terminate session
     - Redirect to login page after logout
     - _Requirements: 1.3_
@@ -57,7 +57,7 @@
     - Test session management
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5_
 
-- [ ] 6. Auth Spirit Checkpoint
+- [x] 6. Auth Spirit Checkpoint
   - Ensure all auth tests pass, ask the user if questions arise.
 
 ---
