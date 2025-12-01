@@ -64,27 +64,27 @@
 
 ## Phase 3: Spirit Registry (Customer Management)
 
-- [ ] 7. Implement customer backend
-  - [ ] 7.1 Create customer service
+- [x] 7. Implement customer backend
+  - [x] 7.1 Create customer service
     - Implement `src/services/customer.ts` with create, getById, list, update, delete, search
     - Ensure dairy_id is automatically set from authenticated user context
     - _Requirements: 2.1, 2.2, 2.3, 2.4, 2.5_
 
-- [ ] 8. Implement customer UI
-  - [ ] 8.1 Create customer list page
+- [x] 8. Implement customer UI
+  - [x] 8.1 Create customer list page
     - Implement `src/app/dashboard/customers/page.tsx`
     - Display customer table with name, phone, address
     - Add search input for filtering
     - _Requirements: 2.2, 2.5_
-  - [ ] 8.2 Create customer add form
+  - [x] 8.2 Create customer add form
     - Implement customer creation modal or page
     - Validate required fields (name)
     - _Requirements: 2.1_
-  - [ ] 8.3 Create customer edit functionality
+  - [x] 8.3 Create customer edit functionality
     - Implement inline edit or edit modal
     - Persist changes and refresh display
     - _Requirements: 2.3_
-  - [ ] 8.4 Implement customer deletion
+  - [x] 8.4 Implement customer deletion
     - Add delete button with confirmation dialog
     - Remove customer from active view
     - _Requirements: 2.4_
@@ -103,7 +103,7 @@
     - **Property 5: Customer Search Tenant Filtering**
     - **Validates: Requirements 2.5**
 
-- [ ] 10. Spirit Registry Checkpoint
+- [x] 10. Spirit Registry Checkpoint
   - Ensure all customer tests pass, ask the user if questions arise.
 
 ---
