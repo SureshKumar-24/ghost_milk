@@ -110,18 +110,18 @@
 
 ## Phase 4: Rate Cauldron (Rate Configuration)
 
-- [ ] 11. Implement rate backend
-  - [ ] 11.1 Create rate service
+- [x] 11. Implement rate backend
+  - [x] 11.1 Create rate service
     - Implement `src/services/rate.ts` with setRate, getRate, listRates, deleteRate, calculateAmount
     - Handle missing rate warning/interpolation
     - _Requirements: 4.1, 4.2, 4.3, 4.4_
 
-- [ ] 12. Implement rate UI
-  - [ ] 12.1 Create rate table page
+- [x] 12. Implement rate UI
+  - [x] 12.1 Create rate table page
     - Implement `src/app/dashboard/rates/page.tsx`
     - Display FAT/SNF rate grid
     - _Requirements: 4.4_
-  - [ ] 12.2 Create rate add/edit form
+  - [x] 12.2 Create rate add/edit form
     - Implement rate input with FAT, SNF, rate_per_liter fields
     - Handle create and update operations
     - _Requirements: 4.1, 4.2_
@@ -131,7 +131,7 @@
     - **Property 9: Rate Storage Round-Trip**
     - **Validates: Requirements 4.1**
 
-- [ ] 14. Rate Cauldron Checkpoint
+- [x] 14. Rate Cauldron Checkpoint
   - Ensure all rate tests pass, ask the user if questions arise.
 
 ---
