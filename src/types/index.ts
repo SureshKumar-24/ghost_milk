@@ -47,11 +47,14 @@ export interface CustomerFilters {
 }
 
 // Milk Entry types
+export type Shift = 'morning' | 'evening'
+
 export interface MilkEntry {
   id: string
   dairy_id: string
   customer_id: string
   date: string
+  shift: Shift
   fat: number
   snf: number
   liters: number
@@ -62,6 +65,7 @@ export interface MilkEntry {
 export interface CreateMilkEntryInput {
   customer_id: string
   date: string
+  shift: Shift
   fat: number
   snf: number
   liters: number

@@ -19,6 +19,7 @@ export default function EntriesPage() {
 
   // Form state
   const [formCustomer, setFormCustomer] = useState('')
+  const [formShift, setFormShift] = useState<'morning' | 'evening'>('morning')
   const [formFat, setFormFat] = useState('')
   const [formSnf, setFormSnf] = useState('')
   const [formLiters, setFormLiters] = useState('')
@@ -74,6 +75,7 @@ export default function EntriesPage() {
 
   const resetForm = () => {
     setFormCustomer('')
+    setFormShift('morning')
     setFormFat('')
     setFormSnf('')
     setFormLiters('')
@@ -112,6 +114,7 @@ export default function EntriesPage() {
       await milkEntryService.create({
         customer_id: formCustomer,
         date: selectedDate,
+        shift: formShift,
         fat,
         snf,
         liters,
@@ -171,7 +174,7 @@ export default function EntriesPage() {
               {formError}
             </div>
           )}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
             <div className="col-span-2 md:col-span-1">
               <label className="block text-sm font-medium text-gray-300 mb-1">Customer</label>
               <select
@@ -183,6 +186,17 @@ export default function EntriesPage() {
                 {customers.map((c) => (
                   <option key={c.id} value={c.id}>{c.name}</option>
                 ))}
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-1">Shift</label>
+              <select
+                value={formShift}
+                onChange={(e) => setFormShift(e.target.value as 'morning' | 'evening')}
+                className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              >
+                <option value="morning">Morning</option>
+                <option value="evening">Evening</option>
               </select>
             </div>
             <div>
@@ -264,6 +278,7 @@ export default function EntriesPage() {
             <thead>
               <tr className="border-b border-gray-700">
                 <th className="py-3 px-4 text-gray-400 font-medium">Customer</th>
+                <th className="py-3 px-4 text-gray-400 font-medium">Shift</th>
                 <th className="py-3 px-4 text-gray-400 font-medium">FAT %</th>
                 <th className="py-3 px-4 text-gray-400 font-medium">SNF %</th>
                 <th className="py-3 px-4 text-gray-400 font-medium">Liters</th>
@@ -275,6 +290,11 @@ export default function EntriesPage() {
               {entries.map((entry) => (
                 <tr key={entry.id} className="border-b border-gray-800 hover:bg-gray-800/50">
                   <td className="py-3 px-4 text-white">{entry.customer?.name || 'Unknown'}</td>
+                  <td className="py-3 px-4 text-gray-300">
+                    <span className={`px-2 py-1 rounded text-xs ${entry.shift === 'morning' ? 'bg-yellow-900/50 text-yellow-300' : 'bg-blue-900/50 text-blue-300'}`}>
+                      {entry.shift === 'morning' ? '🌅 Morning' : '🌙 Evening'}
+                    </span>
+                  </td>
                   <td className="py-3 px-4 text-gray-300">{Number(entry.fat).toFixed(1)}</td>
                   <td className="py-3 px-4 text-gray-300">{Number(entry.snf).toFixed(1)}</td>
                   <td className="py-3 px-4 text-gray-300">{Number(entry.liters).toFixed(1)}</td>

@@ -42,6 +42,7 @@ export class MilkEntryService {
         dairy_id: profile.dairy_id,
         customer_id: input.customer_id,
         date: input.date,
+        shift: input.shift,
         fat: input.fat,
         snf: input.snf,
         liters: input.liters,
