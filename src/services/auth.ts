@@ -39,6 +39,9 @@ export class AuthService {
     const { data: authData, error: authError } = await this.supabase.auth.signUp({
       email,
       password,
+      options: {
+        emailRedirectTo: `${window.location.origin}/auth/callback`,
+      },
     })
 
     if (authError) {
@@ -47,6 +50,14 @@ export class AuthService {
 
     if (!authData.user) {
       return { success: false, error: 'Failed to create user' }
+    }
+
+    // Check if email confirmation is required
+    if (authData.session === null) {
+      return { 
+        success: false, 
+        error: 'Please check your email to confirm your account before signing in.' 
+      }
     }
 
     const userId = authData.user.id
