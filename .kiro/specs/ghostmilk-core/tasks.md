@@ -308,23 +308,23 @@
 
 ## Phase 10: PWA Spirit (Progressive Web App)
 
-- [ ] 31. Implement PWA support
-  - [ ] 31.1 Configure PWA manifest
+- [x] 31. Implement PWA support
+  - [x] 31.1 Configure PWA manifest
     - Create `public/manifest.json` with app name, icons, theme colors
     - Add manifest link to layout
     - _Requirements: 9.1_
-  - [ ] 31.2 Set up service worker
+  - [x] 31.2 Set up service worker
     - Configure next-pwa or workbox
     - Cache static assets and key pages
     - _Requirements: 9.1, 9.2_
-  - [ ] 31.3 Implement offline support
+  - [x] 31.3 Implement offline support
     - Cache API responses for offline viewing
     - Display offline indicator
     - _Requirements: 9.2_
-  - [ ] 31.4 Implement data sync
+  - [x] 31.4 Implement data sync
     - Queue pending operations when offline
     - Sync when connectivity restored
     - _Requirements: 9.3_
 
-- [ ] 32. Final Checkpoint
+- [x] 32. Final Checkpoint
   - Ensure all tests pass and PWA works correctly, ask the user if questions arise.

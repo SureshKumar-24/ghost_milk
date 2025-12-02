@@ -18,6 +18,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "GhostMilk - Dairy Management",
   description: "Spooky dairy milk collection management system",
+  manifest: "/manifest.json",
+  themeColor: "#8A2BE2",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "GhostMilk",
+  },
 };
 
 export default function RootLayout({
